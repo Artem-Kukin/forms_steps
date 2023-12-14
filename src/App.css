@@ -1,38 +1,72 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root {
+  padding: 0 25px;
+}
+
+.app {
+  height: 100%;
+  background: #1f1f1f2b;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Начало "Шапка формы"*/
+.form {
+  height: 15vh;
+  margin-bottom: 2.5%;
 }
+.form__header {
+  height: 100%;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  border-style: groove none dashed;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form__input,
+.form__button {
+  width: 25vw;
+
+  padding: 2.5px 10px;
+  border-radius: 5px;
+  border-style: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form__button:hover {
+  border-style: groove;
 }
+/*Конец "Шапка формы"*/
+
+/* Начало "Тело контента"*/
+.workout {
+  padding: 2vw;
+}
+
+.workout__name {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5vh;
+}
+
+.workout-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+.workout-content__disable {
+  width: 10%;
+}
+.btn-change {
+  margin-right: 10px;
+}
+.btn-change::after {
+  content: "✎";
+}
+.btn-delete::after {
+  content: "✘";
+}
+/*Конец "Тело контента"*/
